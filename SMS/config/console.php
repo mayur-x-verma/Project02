@@ -27,7 +27,14 @@ $config = [
         ],
         'db' => $db,
     ],
-    'params' => $params,
+        'params' => $params,
+        'controllerMap' => [
+        'migrate' => [
+            'class' => 'yii\console\controllers\MigrateController',
+            'migrationPath' => '@app/migrations',
+        ],
+    ],
+
     /*
     'controllerMap' => [
         'fixture' => [ // Fixture generation command line.
